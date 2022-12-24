@@ -1,6 +1,14 @@
 import random
 import os
+# import function as f
 os.system('cls')
+
+def FindIntersect(set1, set2):
+    nums = []
+    for num in set1:
+        if num in set2:
+            nums.append(num)
+    return nums
 
 n = int(input("Введите кол-во элементов первого набора: "))
 m = int(input("Введите кол-во элементов второго набора: "))
@@ -21,5 +29,6 @@ setNum1 = set(nums1)
 # print(setNum1)
 setNum2 = set(nums2)
 # print(setNum2)
-setNew = setNum1 & setNum2
+# setNew = setNum1 & setNum2
+setNew = FindIntersect(setNum1, setNum2)
 print(f"Пересечение: {setNew}")
